@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(233, 229, 229);
 }
 
 .App-link {
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+.btn-color{
+  color: rgb(227, 186, 227);
+  background-color: rgb(66, 41, 156);
+}
+
+.card{
+  border-radius: 4px;
+  background: #e9e9ec;
+  /* box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); */
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  /* padding: 1px 1px 18px 36px; */
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
