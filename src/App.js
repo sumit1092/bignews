@@ -3,7 +3,7 @@ import Navbar from './Component/Navbar'
 import News from './Component/News'
 import './App.css';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -23,7 +23,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Router basename="/newsapp">
+        <HashRouter>
         <Navbar/>
         <LoadingBar
         background='black'
@@ -40,12 +40,11 @@ export class App extends Component {
           <Route exact path="/science" element={<News setProgress = {this.setProgress} apikey={this.apikey} key={'science'} pageSize={this.pageSize} country="in" category = "science"/>}/>
           <Route exact path="/sport" element={<News setProgress = {this.setProgress} apikey={this.apikey} key={'sport'} pageSize={this.pageSize} country="in" category = "sport"/>}/>
         </Routes>
-        </Router>
+        </HashRouter>
       </div>
     )
   }
 }
 
 export default App;
-
 
