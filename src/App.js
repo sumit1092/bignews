@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import Navbar from './Component/Navbar'
 import News from './Component/News'
 import './App.css';
-import {
-  HashRouter as Router,
-  // Routes,
-  // Route,
-} from "react-router-dom";
+// import {
+//   HashRouter as Router,
+//   // Routes,
+//   // Route,
+// } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 
 export class App extends Component {
-  pageSize = 5;
+  pageSize = 10;
    apikey = 'f1b58952ca944141803bf6058b6de0bf'
    //'1d79cae5264846fb81244da4d54a87d9';
 
@@ -23,7 +23,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        {/* <Router> */}
         <Navbar/>
         <LoadingBar
         background='black'
@@ -46,7 +46,7 @@ export class App extends Component {
           <Route exact path="/science" element={<News setProgress = {this.setProgress} apikey={this.apikey} key={'science'} pageSize={this.pageSize} country="in" category = "science"/>}/>
           <Route exact path="/sport" element={<News setProgress = {this.setProgress} apikey={this.apikey} key={'sport'} pageSize={this.pageSize} country="in" category = "sport"/>}/>
         </Routes> */}
-        </Router>
+        {/* </Router> */}
       </div>
     )
   }
